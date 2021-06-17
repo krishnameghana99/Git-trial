@@ -1,0 +1,18 @@
+---
+title: "EDA"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=TRUE}
+
+library(ggplot2)
+head(Puromycin)
+summary(Puromycin)
+ggplot(data = Puromycin) + geom_bar(mapping = aes(x = state))
+ggplot(data = Puromycin, mapping = aes(x = rate)) + geom_freqpoly(mapping = aes(colour = state), binwidth = 10)
+
+```
